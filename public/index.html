@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
+    
+    <title></title>
+
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <ul>
+                <div class="logo"><img src="img\logoNombre2.png" alt="main logo" title="logo principal"></div>
+                <li><a href="#/home"title="inicio">INICIO</a> </li>
+                <li><a href="#/create" title="alta">ALTA</a></li>
+                <li><a href="#/contact"  title="contacto">CONTACTO</a></li>
+                <li><a href="#/about-us" title="nosotros">NOSOTROS</a></li>            
+                <div class="btn-cart" title="carrito"><button class="btn-cart-toggle">🛒</button></div>
+            </ul>      
+        </nav>
+        
+        <section class="cart-container">
+            <div class="icon-cart-close_box"><span class="icon-cart-close"></span></div>
+        
+            <h3>Carrito de compras</h3>
+        
+            <div class="cart_products">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Producto</th>
+                            <th>Precio</th>                    
+                            <th>Cant.</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="products-container"></tbody>          
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">TOTAL</td>
+                            <td class="product__cart-total"></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="btns-container">
+                <button>Vaciar</button>
+                <button>Comprar</button>
+            </div>        
+        </section>    
+    </header>
+
+    <h1>JUGUETERIA Cósmica, TU lugar favorito</h1>    
+    
+    <main></main>
+
+    <footer>
+        <div class="row primary">
+            
+            <div class="column about">
+        
+                <h3>Juguetería Cósmica</h3>
+                <p>Lo más importante para nosotros es ofrecerte productos de alta calidad, innovadores y didácticos. Estamos siempre a la vanguardia.</p>
+            
+                <div class="social">
+                    <i><a href="https://www.facebook.com/jesica.logares"><span><img src="img/icono_facebook.png" alt="Facebook"></span></a> </i>
+            
+                    <i><a href="https://www.instagram.com/mama_y_analista/?hl=es-la"> <span><img src="img/icono_instagram.png" alt="Instagram"></span></a></i>
+                    
+                    <i><a href="https://twitter.com/"> <span><img src="img/icono_twitter.png" alt="Twitter"></span></a></i>
+                    
+                    <i><a href="https://www.youtube.com/"> <span><img src="img/icono_youtube.png" alt="YouTube"></span></a></i>
+        
+                    <i><a href="https://web.whatsapp.com/send?phone=541169477011&text=%C2%A1Hola%21+Estoy+en+la+tienda+BURIDAM+y+quiero+pedir+m%C3%A1s+informaci%C3%B3n."> <span><img src="img/icono_whatapps.png" alt="WhatApps"></span></a></i>
+                </div>
+            </div>
+        
+            <div class="column links">
+                <h3>Nosotros</h3>        
+                <ul>            
+                    <li><a href="#/about-us" title="nosotros">Nuestra historia</a></li>
+                    <li><a href="#/about-us" title="Sucursales">Sucursales</a></li>
+                    <li><a href="#/about-us" title="Horarios de atención">Horarios de atención</a></li>
+                    <li><a href="#/about-us" title="ayuda">ayuda</a></li>
+                </ul>
+            </div>
+        
+            <div class="column links">
+                <h3>Compras</h3> 
+                <ul>
+                    <li><a href="#/about-us" title="Medios de Pago">Medios de Pago</a></li>
+                    <li><a href="#/about-us" title="Promociones">Promociones</a></li>
+                    <li><a href="#/about-us" title="contactos">contacto</a></li>
+                    <li><a href="#/about-us" title="Redes sociales">Redes sociales</a></li>
+                </ul>
+            </div>
+        
+            <div class="column subscribe">
+                <h3>Newsletter</h3>  
+                <div>       
+                    <input type="email" placeholder="Ingresa tu email" />
+                    <button>Subscribe</button>
+                </div>                
+            </div>
+        
+        </div>
+        
+        <div class="row copyright">
+            <div class="footer-menu">                                                   
+                <a href="#/home"title="inicio">INICIO</a>
+                <a href="#/create" title="alta">ALTA</a>
+                <a href="#/contact"  title="contacto">CONTACTO</a>
+                <a href="#/about-us" title="nosotros">NOSOTROS</a>
+            </div>
+            <p>Proyecto Integrador: Juguetería Cósmica - Jesica Logares</p>
+        </div>
+        
+    </footer>   
+    
+    <script src="js/vendor/handlebars/handlebars.min-v4.7.7.js"></script>
+    <script src="js/main.js"></script>   
+    
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<section class="create">
+
+<h3>PRODUCTOS</h3>
+<h4>-LISTADO</h4>
+<button id="btn-get-all" class="btn"> Ver lista</button>
+
+<section class="section-products-table">
+    <div class="products-table-container"></div>
+</section>
+
+<h4>-ALTA BAJA MODIFICACIÓN</h4>
+<button id="btn-get-one" class="btn"> Buscar por ID</button>
+    <div>
+        <input type="text" id="_id" name="_id" hidden>
+    </div>
+<form class="create-form" method="post" action="/upload" enctype="multipart/form-data">
+    <div class="grid">    
+        <div class="column-container">                      
+            <div>
+                <input type="text" id="name" name="name-create" minlength="2" maxlength="70" placeholder="Nombre *" autofocus required>
+            </div>
+            <div>            
+                <input type="number" min="0" max="99999" id="price" name="price" placeholder="Precio *" required >
+            </div>    
+            <div>
+                <input type="number" min="0" id="stock" name="stock" placeholder="Stock *" required>
+            </div>
+            <div>
+                <input type="text" list="brand-list" placeholder="Marca *" id="brand-input">
+                <datalist id="brand-list">
+                    <select  id="brand" name="brand" required> 
+                        <option value="Arbrex">Arbrex</option>
+                        <option value="Cafaro">Cafaro </option>
+                        <option value="Classic World">Classic World</option>
+                        <option value="Cocomelon">Cocomelon</option>
+                        <option value="Ditoys">Ditoys</option>
+                        <option value="disabled>E&B" disabled>E&B</option>
+                        <option value="Hasbro">Hasbro</option>
+                        <option value="Kinetic Sand">Kinetic Sand</option>
+                        <option value="Juliana">Juliana</option>
+                        <option value="La kobra">La kobra</option>
+                        <option value="Lego">Lego</option>
+                        <option value="Lionels">Lionels</option>                    
+                        <option value="Magnific Toys">Magnific Toys</option>
+                        <option value="Matel">Matel</option>
+                        <option value="Monster Jam">Monster Jam </option>
+                        <option value="Pinypon">Pinypon</option>
+                        <option value="Playmobil">Playmobil</option>
+                        <option value="Pokemon">Pokemon </option>
+                        <option value="Roblox">Roblox</option>
+                        <option value="Ruibal">Ruibal</option>
+                        <option value="Trencity">Trencity</option>
+                        <option value="Vulcanita">Vulcanita</option>
+                        <option value="Wabro">Wabro</option>
+                    </select>
+                </datalist>
+            </div>
+            <div>                  
+                <input type="text" list="category-list" placeholder="Categoría *" id="category-input">
+                <datalist id="category-list">
+                    <select id="category" name="category" required>            
+                        <option value="aire libre y rodados">aire libre y rodados</option>
+                        <option value="arte y diseño">arte y diseño</option>
+                        <option value="bloques y construcción">bloques y construcción</option>
+                        <option value="escolar y librería">escolar y librería</option>
+                        <option value="instrumentos musicales">instrumentos musicales</option>
+                        <option value="juegos de mesa">juegos de mesa</option>
+                        <option value="juegos de rol y disfraces">juegos de rol y disfraces</option>
+                        <option value="muñecos">muñecos</option>
+                        <option value="peluches">peluches</option>
+                        <option value="primera infancia">primera infancia</option>   
+                        <option value="vehículos">vehículos</option>
+                        <option value="verano">verano</option>
+                    </select>
+                </datalist>
+            </div>            
+            <div class="edad">      
+                <div>
+                    <label for="ageFrom">Edad desde *:<label>
+                    <input type="number" min="0" max="99" id="ageFrom" name="ageFrom" required >
+                </div>                
+            </div>
+            <div class="edad"> 
+                <div>
+                    <label for="ageUpTo">Edad hasta *:</label>
+                    <input type="number" min="1" max="99" id="ageUpTo" name="ageUpTo" required >
+                </div>            
+            </div>
+            
+            <div class="input-checkbox">
+                <input type="radio" id="months" name="ageUnit" value="meses" class="ageUnit">
+                <label for="months">meses</label>
+                <input type="radio" id="years" name="ageUnit" value="años" class="ageUnit" checked>
+                <label for="years">años</label>
+            </div>  
+
+            <div class="input-checkbox">
+                <label for="freeShipping">Envíos sin cargo</label>
+                <input type="checkbox" id="freeShipping" name="freeShipping">            
+            </div>  
+
+        </div>
+
+        <div class="column-container">
+            <div>            
+                <textarea id="shortDescription" name="shortDescription" rows="8" cols="20"  minlength="10" maxlength="200" placeholder="Ingresa una breve descripción *" required ></textarea>
+            </div>
+            <div>            
+                <textarea id="longDescription" name="longDescription" rows="19" cols="40"  minlength="10" maxlength="2000" placeholder="Ingresa una descripción detallada *" required></textarea>
+            </div>
+            <div class="input-file-main-img">
+                <label for="mainPhoto">Foto principal: *</label>
+                <input type="file"  accept="image/*" id="mainPhoto" name="mainPhoto" required >
+            </div>                     
+        </div>    
+    </div>   
+
+    <div class="input-btn" id="btn-reiniciar">       
+        <input type="reset" value="reiniciar">
+    </div>
+    <div class="input-btn">        
+        <input type="submit" id="btn-post" value="Alta">
+        <input type="submit" id="btn-delete" value="baja">
+        <input type="submit" id="btn-put" value="modificar">
+    </div>   
+
+    <p>*campos requeridos</p>  
+
+</form>
+
+</section>
+
+<script src="../js/modules/create.js"></script>
